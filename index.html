@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Una Noche Gastronómica | Cenas privadas y catering</title>
+    <meta name="description" content="Una Noche Gastronómica ofrece experiencias culinarias exclusivas, cenas privadas de 3 pasos y servicio de catering para eventos, con una propuesta elegante y moderna.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-ung">UNG</span>
+                <span class="logo-text">Una Noche Gastronómica</span>
+            </a>
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+                <li><a href="#experiencias" class="nav-link">Experiencias</a></li>
+                <li><a href="#contacto" class="nav-link btn-reserva">Reservar</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header id="inicio" class="hero">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="assets/video_portada.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title fade-in">Vení a descubrirnos.</h1>
+            <p class="hero-subtitle fade-in delay-1">Cenas temáticas con sello gourmet. Catering personalizados, diseñados a tu gusto para cada ocasión especial.</p>
+            <a href="#experiencias" class="btn-primary fade-in delay-2">Descubrir Experiencias</a>
+        </div>
+    </header>
+
+    <section id="nosotros" class="section about">
+        <div class="container about-grid">
+            <div class="about-text scroll-reveal">
+                <h2 class="section-title">Nuestra historia</h2>
+                <div class="divider"></div>
+                <p>Somos <strong>Axel Errecalde</strong> y <strong>Tomás Álvarez</strong>, profesionales y amantes de la gastronomía. Durante nuestros dos años de estudio, compartimos equipo en varios exámenes y descubrimos que compartíamos una misma visión y ética de trabajo.</p>
+                <p>Ambos concluimos que nuestra verdadera motivación es la libertad culinaria. Así nació "Una Noche Gastronómica", un proyecto independiente creado con el firme objetivo de poder explayarnos, encontrar nuestra identidad, experimentar con ingredientes por nuestra cuenta, y brindar una experiencia de restaurante de alta calidad en un ambiente íntimo.</p>
+            </div>
+            <div class="about-image scroll-reveal">
+                <img src="assets/nosotros.jpg" alt="Axel y Tomás juntos" class="image-shadow" style="border-radius: 4px;">
+            </div>
+        </div>
+
+        <div class="container founders-showcase scroll-reveal">
+            <div class="founder-card">
+                <img src="assets/axel.jpg" alt="Axel Errecalde" class="img-portrait image-shadow">
+                <h3 class="founder-name">Axel Errecalde</h3>
+                <p class="founder-role">Cofundador & chef</p>
+            </div>
+            <div class="founder-card">
+                <img src="assets/tomas.jpg" alt="Tomás Álvarez" class="img-portrait image-shadow">
+                <h3 class="founder-name">Tomás Álvarez</h3>
+                <p class="founder-role">Cofundador & chef</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="section gallery bg-light">
+        <div class="container">
+            <div class="text-center scroll-reveal">
+                <h2 class="section-title">Nuestras creaciones</h2>
+                <div class="divider center"></div>
+                <p class="section-subtitle">Un vistazo a la calidad, texturas y colores de los platos que preparamos.</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item scroll-reveal">
+                    <img src="assets/plato1.jpg" alt="Risotto de calabaza" class="gallery-img">
+                </div>
+                <div class="gallery-item scroll-reveal delay-1">
+                    <img src="assets/plato2.jpg" alt="Entrante de zanahorias asadas" class="gallery-img">
+                </div>
+                <div class="gallery-item scroll-reveal delay-2">
+                    <img src="assets/plato3.jpg" alt="Lingote de osobuco" class="gallery-img">
+                </div>
+                <div class="gallery-item scroll-reveal delay-1">
+                    <img src="assets/plato4.jpg" alt="Panna cotta" class="gallery-img">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencias" class="section services">
+        <div class="container">
+            <div class="text-center scroll-reveal">
+                <h2 class="section-title">Servicios exclusivos</h2>
+                <div class="divider center"></div>
+                <p class="section-subtitle">Diseñamos propuestas a medida para satisfacer los paladares más exigentes.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card scroll-reveal" onclick="window.location.href='#contacto'" style="cursor: pointer;" title="Clic aquí para reservar">
+                    <div class="service-img-wrapper">
+                        <img src="assets/servicio_cena.jpg" alt="Cena privada de 3 pasos" class="service-img">
+                    </div>
+                    <div class="service-content">
+                        <h3>Cena privada de 3 pasos</h3>
+                        <p>Nuestra experiencia insignia. Te invitamos a nuestro espacio (con capacidad máxima para 18 personas) para disfrutar de un menú degustación íntimo y refinado. Ideal para celebraciones especiales o simplemente para disfrutar del buen comer en un ambiente exclusivo.</p>
+                        <div style="margin-top: 15px; padding: 15px; background: rgba(176,124,91,0.05); border-left: 3px solid var(--color-accent); border-radius: 4px;">
+                            <h4 style="font-size: 0.85rem; text-transform: uppercase; letter-spacing: 1px; color: var(--color-accent); margin-bottom: 10px;">Menú de ejemplo</h4>
+                            <ul style="list-style: none; font-size: 0.9rem; color: var(--color-text-light);">
+                                <li style="margin-bottom: 8px;"><strong>Paso 1:</strong> Risotto de calabaza con bruschetta</li>
+                                <li style="margin-bottom: 8px;"><strong>Paso 2:</strong> Lingote de osobuco braseado o similar</li>
+                                <li style="margin-bottom: 8px;"><strong>Paso 3:</strong> Zanahorias glaseadas (degustación de técnicas)</li>
+                                <li><strong>Paso 4:</strong> Panna cotta de vainilla con pomelo</li>
+                            </ul>
+                        </div>
+                        <ul class="service-features">
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Menú de 3 tiempos</li>
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Hasta 18 comensales</li>
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Ambiente íntimo</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card scroll-reveal delay-1" onclick="window.location.href='#contacto'" style="cursor: pointer;" title="Clic aquí para reservar">
+                    <div class="service-img-wrapper">
+                        <img src="assets/servicio_catering.jpg" alt="Eventos y Catering" class="service-img">
+                    </div>
+                    <div class="service-content">
+                        <h3>Catering y fiestas</h3>
+                        <p>Llevamos nuestra propuesta gastronómica a tu cumpleaños, fiesta o reunión social. Nos caracterizamos por nuestra <strong>total versatilidad</strong>: podemos acoplarnos a lo que necesites, desde pizzas y pastas artesanales, hasta comida taiwanesa o menús de pasos. Todo se puede hablar y diseñar a tu medida.</p>
+                        <ul class="service-features">
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Menús 100% adaptables</li>
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Diversidad de estilos de cocina</li>
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Desarrollo a medida del cliente</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="section contact bg-light">
+        <div class="container contact-grid">
+            <div class="contact-info scroll-reveal">
+                <h2 class="section-title">Reserva tu noche</h2>
+                <div class="divider"></div>
+                <p>Cuéntanos sobre tu próximo evento o reserva tu lugar para nuestra cena privada. Estaremos encantados de crear algo especial para ti.</p>
+                <div class="contact-methods">
+                    <div class="method">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                        <span>+54 9 11 1234-5678</span>
+                    </div>
+                    <div class="method">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                        <span>info@unanochegastronomica.com</span>
+                    </div>
+                    <div class="method">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        <a href="https://www.instagram.com/unanochegastronomica/" target="_blank" rel="noopener noreferrer" style="color: var(--color-text); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text)'">@unanochegastronomica</a>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form scroll-reveal delay-1">
+                <form id="inquiryForm">
+                    <div class="form-group">
+                        <label for="name">Nombre completo</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="date">Fecha estimada</label>
+                            <input type="date" id="date">
+                        </div>
+                        <div class="form-group">
+                            <label for="guests">Cantidad de personas</label>
+                            <input type="number" id="guests" min="1" max="100">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Tipo de servicio</label>
+                        <select id="service">
+                            <option value="cena">Cena privada (máx 18 pax)</option>
+                            <option value="catering">Catering / evento</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensaje adicional</label>
+                        <textarea id="message" rows="4"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary w-100">Enviar consulta</button>
+                    <div class="form-status" id="formStatus"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <span class="logo-ung">UNG</span>
+                <p>Una Noche Gastronómica</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://www.instagram.com/unanochegastronomica/" target="_blank" rel="noopener noreferrer" class="ig-footer-btn">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                    @unanochegastronomica
+                </a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Una Noche Gastronómica. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <!-- Gallery Modal -->
+    <div id="gallery-modal" class="modal">
+        <div class="close-modal" aria-label="Volver">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>
+        </div>
+        <div class="modal-content">
+            <img id="modal-img" src="" alt="Plato expandido">
+            <div id="modal-caption" class="modal-caption"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
