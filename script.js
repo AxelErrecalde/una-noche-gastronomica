@@ -65,9 +65,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Check on scroll
     window.addEventListener('scroll', revealOnScroll);
 
-    // Form Submission (Simulated)
+    // Form Submission (Real Integration with Google Sheets)
     const form = document.getElementById('inquiryForm');
     const formStatus = document.getElementById('formStatus');
+    
+    // IMPORTANT: Replace this URL with your Google Apps Script Web App URL
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwWW2MRgHFJDXIWusxzdzeKg3WAWeeCGlVqphJ7hXEujSZqG3OdTus-KQ3jC27X48mv/exec';
     
     if (form) {
         form.addEventListener('submit', (e) => {
@@ -78,20 +81,41 @@ document.addEventListener('DOMContentLoaded', () => {
             btn.textContent = 'Enviando...';
             btn.disabled = true;
             
-            // Simulating API call
-            setTimeout(() => {
-                btn.textContent = '¡Consulta Enviada!';
-                btn.style.backgroundColor = '#4CAF50'; // Success green
+            // Mejora de compatibilidad: Enviamos como 'application/x-www-form-urlencoded'
+            const formData = new URLSearchParams();
+            new FormData(form).forEach((value, key) => formData.append(key, value));
+            formData.append('timestamp', new Date().toLocaleString());
+
+            fetch(SCRIPT_URL, {
+                method: 'POST',
+                mode: 'no-cors', // Importante para evitar errores de red local
+                cache: 'no-cache',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: formData.toString()
+            })
+            .then(() => {
+                btn.textContent = '¡Reserva Enviada!';
+                btn.style.backgroundColor = '#4CAF50';
                 btn.style.color = 'white';
+                formStatus.textContent = 'Gracias. Los datos se han guardado.';
+                formStatus.style.color = '#4CAF50';
                 
                 setTimeout(() => {
                     form.reset();
                     btn.textContent = originalText;
                     btn.disabled = false;
-                    btn.style.backgroundColor = ''; // Reset to CSS default
+                    btn.style.backgroundColor = '';
                     btn.style.color = '';
-                }, 3000);
-            }, 1500);
+                    formStatus.textContent = '';
+                }, 4000);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                btn.textContent = 'Error al enviar';
+                btn.disabled = false;
+                formStatus.textContent = 'Hubo un problema. Por favor intenta por WhatsApp.';
+                formStatus.style.color = '#f44336';
+            });
         });
     }
 
