@@ -32,9 +32,27 @@
     </nav>
 
     <header id="inicio" class="hero">
-        <video autoplay muted loop playsinline class="hero-video">
+        <!-- Video Fix: Removed specific codecs and simplified tag for reliability -->
+        <video autoplay muted loop playsinline poster="assets/servicio_cena.jpg" class="hero-video" id="heroVideo">
             <source src="assets/video_portada.mp4" type="video/mp4">
+            Tu navegador no soporta el formato de video.
         </video>
+        <!-- Minimal diagnostic script -->
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const video = document.getElementById('heroVideo');
+                if (video) {
+                    const playVideo = () => {
+                        video.play().catch(err => {
+                            console.warn("Autoplay bloqueado, se requiere interacción o cambio de política.");
+                        });
+                    };
+                    playVideo();
+                    // Fallback for some browsers
+                    window.addEventListener('click', playVideo, { once: true });
+                }
+            });
+        </script>
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1 class="hero-title fade-in">Vení a descubrirnos.</h1>
@@ -133,9 +151,9 @@
                         <h3>Catering y fiestas</h3>
                         <p>Llevamos nuestra propuesta gastronómica a tu cumpleaños, fiesta o reunión social. Nos caracterizamos por nuestra <strong>total versatilidad</strong>: podemos acoplarnos a lo que necesites, desde pizzas y pastas artesanales, hasta comida taiwanesa o menús de pasos. Todo se puede hablar y diseñar a tu medida.</p>
                         <ul class="service-features">
-                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Menús 100% adaptables</li>
-                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Diversidad de estilos de cocina</li>
-                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Desarrollo a medida del cliente</li>
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Menú de 3 tiempos</li>
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Hasta 18 comensales</li>
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> Ambiente íntimo</li>
                         </ul>
                     </div>
                 </div>
@@ -159,7 +177,7 @@
                         <span>info@unanochegastronomica.com</span>
                     </div>
                     <div class="method">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        <svg width="24" height="24" viewBox="0 0 128 128" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                         <a href="https://www.instagram.com/unanochegastronomica/" target="_blank" rel="noopener noreferrer" style="color: var(--color-text); text-decoration: none; transition: color 0.3s;" onmouseover="this.style.color='var(--color-accent)'" onmouseout="this.style.color='var(--color-text)'">@unanochegastronomica</a>
                     </div>
                 </div>
