@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const formStatus = document.getElementById('formStatus');
     
     // IMPORTANT: Replace this URL with your Google Apps Script Web App URL
-    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwWW2MRgHFJDXIWusxzdzeKg3WAWeeCGlVqphJ7hXEujSZqG3OdTus-KQ3jC27X48mv/exec';
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwTgiHv46eJdmxotJp2eGw3jkXUoNlejrnPDoa8Uiz9AVV2--V0q--6n2_PyY-2FRGO/exec';
     
     if (form) {
         form.addEventListener('submit', (e) => {
