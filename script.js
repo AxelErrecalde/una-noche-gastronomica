@@ -85,6 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new URLSearchParams();
             new FormData(form).forEach((value, key) => formData.append(key, value));
             formData.append('timestamp', new Date().toLocaleString());
+            
+            console.log('Enviando datos a Google Sheets:', Object.fromEntries(formData));
 
             fetch(SCRIPT_URL, {
                 method: 'POST',
