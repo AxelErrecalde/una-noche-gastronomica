@@ -689,3 +689,45 @@ input:focus, select:focus, textarea:focus {
     .form-row { grid-template-columns: 1fr; }
     .footer-content { flex-direction: column; gap: 30px; text-align: center; }
 }
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-contact {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 25px;
+    background-color: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 4px;
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.btn-contact:hover {
+    transform: translateX(10px);
+    border-color: var(--color-accent);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.btn-contact svg {
+    color: var(--color-accent);
+}
+
+.btn-contact.wsp:hover {
+    background-color: rgba(37, 211, 102, 0.05);
+    border-color: #25d366;
+}
+
+.btn-contact.instagram:hover {
+    background-color: rgba(225, 48, 108, 0.05);
+    border-color: #e1306c;
+}
+
